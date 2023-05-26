@@ -8,12 +8,15 @@ public class ElectricObjects : MonoBehaviour
     /*
     
     0 = lamp
-    1 = battery
+    1 = battery *
     2 = player controlled switch
     3 = relais
     4 = relais controlled switch
     5 = button
-    6 = resistance
+    6 = resistance *
+
+    * removed
+    
     */
 
     public int component;
@@ -22,18 +25,6 @@ public class ElectricObjects : MonoBehaviour
     public bool relaisOn;
     public List<GameObject> switches= new List<GameObject>();
     public ElectricController electricController;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void Interact()
     {

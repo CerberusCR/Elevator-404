@@ -24,20 +24,6 @@ public class ElectricController : MonoBehaviour
         public bool pathIsActive;
     }
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-    
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Calculate()
     {
         while (relais > 0)

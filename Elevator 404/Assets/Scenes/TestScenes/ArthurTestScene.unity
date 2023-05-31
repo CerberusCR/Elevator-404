@@ -232,7 +232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9373389}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0685606, y: 1.32, z: 1.404109}
+  m_LocalPosition: {x: 1.0685606, y: 2.52, z: 1.404109}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -261,9 +261,11 @@ MonoBehaviour:
   x: 0
   y: 0
   sensitivity: 50
+  onGround: 0
   cam: {fileID: 1081628611}
   lookingAtObject: {fileID: 0}
-  texture: {fileID: 0}
+  rb: {fileID: 0}
+  jumpHeight: 4
 --- !u!1 &46720527
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,7 +949,7 @@ GameObject:
   - component: {fileID: 866218844}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

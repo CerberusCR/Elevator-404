@@ -15,41 +15,53 @@ public class PlayerController : MonoBehaviour
     public float x;
     public float y;
     public float sensitivity;
+    public bool onGround;
     public GameObject cam;
     public RaycastHit hit;
     public GameObject lookingAtObject;
-    public Texture texture;
+    public Rigidbody rb;
+    public float jumpHeight;
 
 
     private void Start()
     {
+        rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
     }
 
 
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.gameObject.tag == "Ground")
+        {
+            onGround = true;
+        }
+    }
 
     // Update is called once per frame
     void Update()
     {
+        //input
         h = Input.GetAxis("Horizontal");
         v = Input.GetAxis("Vertical");
         x = Input.GetAxis("Mouse X");
-        
+
+        y -= Input.GetAxis("Mouse Y") * Time.deltaTime * sensitivity;
 
         move.x = h;
         move.z = v;
         move.Normalize();
-        cameraDraaien1.y = x;
 
-        y -= Input.GetAxis("Mouse Y") * Time.deltaTime * sensitivity;
+
+        cameraDraaien1.y = x;
         y = Mathf.Clamp(y, -90, 90);
 
-
+        //movement
         transform.Translate(move * Time.deltaTime * speed);
         transform.Rotate(cameraDraaien1 * Time.deltaTime * sensitivity);
         cam.transform.localRotation = Quaternion.Euler(y, 0, 0);
 
+        //raycast voor interactie
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 5))
         {
             lookingAtObject = hit.collider.gameObject;
@@ -64,6 +76,13 @@ public class PlayerController : MonoBehaviour
                     //lookingAtObject.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", Color.red);
                 }
             }
+        }
+
+        //springen
+        if (Input.GetKeyDown(KeyCode.Space) && onGround)
+        {
+            rb.AddForce(transform.up * jumpHeight, ForceMode.Impulse);
+            onGround = false;
         }
     }
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - component
   - Ground
+  - liftknop
   layers:
   - Default
   - TransparentFX

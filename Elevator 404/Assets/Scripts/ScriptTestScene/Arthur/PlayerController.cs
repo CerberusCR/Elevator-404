@@ -1,6 +1,7 @@
 using Packages.Rider.Editor.UnitTesting;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
 
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public GameObject lookingAtObject;
     public Rigidbody rb;
     public float jumpHeight;
+    public TMP_Text display;
 
 
     private void Start()
@@ -68,7 +70,19 @@ public class PlayerController : MonoBehaviour
             
             if (lookingAtObject.tag == "component")
             {
-                //display text
+                if (lookingAtObject.GetComponent<ElectricObjects>().component == 2)
+                {
+                    display.text = "Press E to flip switch";
+                }
+                else if (lookingAtObject.GetComponent<ElectricObjects>().component == 5)
+                {
+                    display.text = "Press E to test circuit";
+                }
+                else
+                {
+                    display.text = "";
+                }
+
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     lookingAtObject.GetComponent<ElectricObjects>().Interact();
@@ -76,6 +90,24 @@ public class PlayerController : MonoBehaviour
                     //lookingAtObject.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", Color.red);
                 }
             }
+            else if (lookingAtObject.tag == "liftknop")
+            {
+                display.text = "Press E to go to the next level";
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    lookingAtObject.GetComponent<Liftknop>().Interact();
+                    //print(lookingAtObject.GetComponent<MeshRenderer>().material);
+                    //lookingAtObject.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", Color.red);
+                }
+            }
+            else
+            {
+                display.text = "";
+            }
+        }
+        else
+        {
+            display.text = "";
         }
 
         //springen

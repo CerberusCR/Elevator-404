@@ -415,7 +415,7 @@ Transform:
   m_GameObject: {fileID: 8950987864396237306}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.06, y: 1.55, z: 0.7095719}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.825, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8950987863242398875}
@@ -501,13 +501,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move: {x: 0, y: 0, z: 0}
   cameraDraaien1: {x: 0, y: 0, z: 0}
-  cameraDraaien2: {x: 0, y: 0, z: 0}
   h: 0
   v: 0
-  speed: 5
+  movementSpeed: 5
   x: 0
   y: 0
-  sensitivity: 50
+  mouseSensitivity: 50
   onGround: 0
   cam: {fileID: 8950987863242398878}
   lookingAtObject: {fileID: 0}

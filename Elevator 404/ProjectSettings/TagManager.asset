@@ -7,6 +7,7 @@ TagManager:
   - component
   - Ground
   - liftknop
+  - PickUpable
   layers:
   - Default
   - TransparentFX

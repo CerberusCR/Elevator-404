@@ -72,8 +72,8 @@ public class PlayerController : MonoBehaviour
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 5))
         {
             lookingAtObject = hit.collider.gameObject;
-            
-            
+
+
             if (lookingAtObject.tag == "component")
             {
                 if (lookingAtObject.GetComponent<ElectricObjects>().component == 2)
@@ -116,13 +116,14 @@ public class PlayerController : MonoBehaviour
                     }
                     else
                     {
-                        
+
                         objectInHand = lookingAtObject;
                         objectInHand.GetComponent<Rigidbody>().isKinematic = true;
                         inHand = true;
                     }
-                    
+
                 }
+                
             }
             else
             {
@@ -135,6 +136,16 @@ public class PlayerController : MonoBehaviour
                         objectInHand.GetComponent<Rigidbody>().isKinematic = false;
                         objectInHand.transform.position = (cam.transform.position + (hit.point - cam.transform.position) * 0.9f);
                         objectInHand = null;
+                    }
+                }
+                if (Input.GetKeyDown(KeyCode.Mouse0))
+                {
+                    if (inHand == true)
+                    {
+                        if (objectInHand.name == "zaklamp")
+                        {
+                            objectInHand.GetComponent<Light>().enabled = !objectInHand.GetComponent<Light>().enabled;
+                        }
                     }
                 }
             }
@@ -150,6 +161,16 @@ public class PlayerController : MonoBehaviour
                     objectInHand.GetComponent<Rigidbody>().isKinematic = false;
                     objectInHand.transform.position = cam.transform.position + cam.transform.forward * 4.5f;
                     objectInHand = null;
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                if (inHand == true)
+                {
+                    if (objectInHand.name == "zaklamp")
+                    {
+                        objectInHand.GetComponent<Light>().enabled = !objectInHand.GetComponent<Light>().enabled;
+                    }
                 }
             }
         }

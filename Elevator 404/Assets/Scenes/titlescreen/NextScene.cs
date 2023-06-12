@@ -11,8 +11,10 @@ public class NextScene : MonoBehaviour
     public GameObject credits;
     public GameObject mainMenu;
     public GameObject options;
-    
-    
+    public GameObject audioOptions;
+    public GameObject graphicsOptions;
+
+
 
     public void Play()
     {
@@ -45,5 +47,22 @@ public class NextScene : MonoBehaviour
     {
         options.gameObject.SetActive(false);
         mainMenu.gameObject.SetActive(true);
+    }
+    public void AudioOptions()
+    {
+        options.gameObject.SetActive(false);
+        audioOptions.gameObject.SetActive(true);
+    }
+
+    public void GraphicsOptions()
+    {
+        options.gameObject.SetActive(false);
+        graphicsOptions.gameObject.SetActive(true);
+    }
+    public void BackToOptions()
+    {
+        options.gameObject.SetActive(true);
+        audioOptions.gameObject.SetActive(false);
+        graphicsOptions.gameObject.SetActive(false);
     }
 }

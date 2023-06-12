@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - liftknop
   - PickUpable
+  - zaklamp
   layers:
   - Default
   - TransparentFX

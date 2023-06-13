@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: IsRolling
+    m_ConditionEvent: isRolling
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7168726928940366085}
@@ -34,7 +34,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsRolling
+    m_ConditionEvent: isRolling
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7263869638844304803}
@@ -59,7 +59,7 @@ AnimatorController:
   m_Name: WalkingAI
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: IsRolling
+  - m_Name: isRolling
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -156,7 +156,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -4201407442958737851}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 9126500762981359366}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -172,3 +173,15 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &9126500762981359366
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8e51d860302cf843bc3174721724a56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

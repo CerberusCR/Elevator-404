@@ -9,6 +9,7 @@ TagManager:
   - liftknop
   - PickUpable
   - zaklamp
+  - WayPoints
   layers:
   - Default
   - TransparentFX

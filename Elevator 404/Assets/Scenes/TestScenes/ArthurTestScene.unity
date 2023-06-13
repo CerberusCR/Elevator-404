@@ -190,6 +190,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerWithCrosshair
       objectReference: {fileID: 0}
+    - target: {fileID: 4761542230276462854, guid: 436f4a16ac75e2347bd491f6ae3b61e9,
+        type: 3}
+      propertyPath: mouseSensitivity
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 7421854726984598486, guid: 436f4a16ac75e2347bd491f6ae3b61e9,
         type: 3}
       propertyPath: m_LocalPosition.z

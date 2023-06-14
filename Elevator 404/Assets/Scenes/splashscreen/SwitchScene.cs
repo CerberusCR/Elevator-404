@@ -11,6 +11,7 @@ public class SwitchScene : MonoBehaviour
     public void Start()
     {
         StartCoroutine(SwitchScenes());
+        Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, true);
     }
     public IEnumerator SwitchScenes()
     {

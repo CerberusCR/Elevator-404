@@ -15,8 +15,11 @@ public class NextScene : MonoBehaviour
     public GameObject audioOptions;
     public GameObject graphicsOptions;
     public GameObject dropdown;
-    public int dropdownValue;
-
+    public GameObject geluid;
+    public GameObject slidermainaudio;
+    public GameObject slidervoiceaudio;
+    public GameObject[] audioSource;
+    public GameObject[] audioSourceVoice;
 
 
     public void Play()
@@ -76,21 +79,29 @@ public class NextScene : MonoBehaviour
 
     public void SwitchScreenSize()
     {
-        dropdownValue = dropdown.GetComponent<TMP_Dropdown>().value;
-        
-        if (dropdownValue == 0)
+        if (dropdown.GetComponent<TMP_Dropdown>().value == 0)
         {
             Screen.SetResolution(1920, 1080, Screen.fullScreen, 0);
         }
-        else if (dropdownValue == 1)
+        else if (dropdown.GetComponent<TMP_Dropdown>().value == 1)
         {
             Screen.SetResolution(1280, 720, Screen.fullScreen, 0);
         }
-        else if (dropdownValue == 2)
+        else if (dropdown.GetComponent<TMP_Dropdown>().value == 2)
         {
             Screen.SetResolution(640, 480, Screen.fullScreen, 0);
         }
-        
     }
-
+    
+    public void Audio()
+    {
+        for (int i = 0; i < audioSource.Length; i++)
+        {
+            audioSource[i].GetComponent<AudioSource>().volume = slidermainaudio.GetComponent<Slider>().value;
+        }
+        for (int i = 0; i < audioSource.Length; i++)
+        {
+            audioSourceVoice[i].GetComponent<AudioSource>().volume = slidervoiceaudio.GetComponent<Slider>().value * slidermainaudio.GetComponent<Slider>().value;
+        }
+    }
 }

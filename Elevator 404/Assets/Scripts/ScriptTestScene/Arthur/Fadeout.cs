@@ -9,64 +9,60 @@ using UnityEngine.SceneManagement;
 
 public class Fadeout : MonoBehaviour
 {
+    /*
     public GameObject postprocessingGlobal;
     public ChannelMixer mixer;
+    public float fadeAmount;
 
     public void Start()
     {
-        //mixer = postprocessingGlobal.GetComponent<Volume>().profile.components[0].GetComponent<ChannelMixer>();
+        mixer = (ChannelMixer)postprocessingGlobal.GetComponent<Volume>().profile.components[0];
     }
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            StartCoroutine(FadeBlackOutSquare());
+            StartCoroutine(FadeIn());
         }
         if (Input.GetKeyDown(KeyCode.O))
         {
-            StartCoroutine(FadeBlackOutSquare(false));
+            StartCoroutine(FadeOut());
         }
     }
-    public IEnumerator FadeBlackOutSquare(bool fadeToBlack = true, int fadeSpeed = 5)
+    public IEnumerator FadeIn()
     {
+        //fadeAmount -= fadeSpeed * Time.deltaTime;
+        ClampedFloatParameter cP = new ClampedFloatParameter(0, -200, 200, true);
+        mixer.blueOutBlueIn = cP;
+        mixer.blueOutGreenIn = cP;
+        mixer.blueOutRedIn = cP;
+        mixer.greenOutBlueIn = cP;
+        mixer.greenOutGreenIn = cP;
+        mixer.greenOutRedIn = cP;
+        mixer.redOutBlueIn = cP;
+        mixer.redOutGreenIn = cP;
+        mixer.redOutRedIn = cP;
         
-        float fadeAmount = 100;
-        if (fadeToBlack)
-        {
-            while (fadeAmount > 0)
-            {
-                fadeAmount -= fadeSpeed * Time.deltaTime;
-                ClampedFloatParameter cP = new ClampedFloatParameter(fadeAmount, -200, 200);
-                mixer.blueOutBlueIn = cP;
-                mixer.blueOutGreenIn = cP;
-                mixer.blueOutRedIn = cP;
-                mixer.greenOutBlueIn = cP;
-                mixer.greenOutGreenIn = cP;
-                mixer.greenOutRedIn = cP;
-                mixer.redOutBlueIn = cP;
-                mixer.redOutGreenIn = cP;
-                mixer.redOutRedIn = cP;
-                yield return null;
-            }
-        }
-        else
-        {
-            while (fadeAmount < 100)
-            {
-                fadeAmount += fadeSpeed * Time.deltaTime;
-                ClampedFloatParameter cP = new ClampedFloatParameter(fadeAmount, -200, 200);
-                mixer.blueOutBlueIn = cP;
-                mixer.blueOutGreenIn = cP;
-                mixer.blueOutRedIn = cP;
-                mixer.greenOutBlueIn = cP;
-                mixer.greenOutGreenIn = cP;
-                mixer.greenOutRedIn = cP;
-                mixer.redOutBlueIn = cP;
-                mixer.redOutGreenIn = cP;
-                mixer.redOutRedIn = cP;
-                yield return null;
-            }
-        }
+        mixer.SetDirty();
+        
+        yield return null;
     }
+    public IEnumerator FadeOut()
+    {
+        //fadeAmount += fadeSpeed * Time.deltaTime;
+        ClampedFloatParameter cP = new ClampedFloatParameter(100, -200, 200, true);
+        mixer.blueOutBlueIn = cP;
+        mixer.blueOutGreenIn = cP;
+        mixer.blueOutRedIn = cP;
+        mixer.greenOutBlueIn = cP;
+        mixer.greenOutGreenIn = cP;
+        mixer.greenOutRedIn = cP;
+        mixer.redOutBlueIn = cP;
+        mixer.redOutGreenIn = cP;
+        mixer.redOutRedIn = cP;
+        mixer.SetDirty();
+        yield return null;
+    }
+    */
 }
     

@@ -15,7 +15,7 @@ public class IdleBehaviour : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         timer += Time.deltaTime;
-        if (timer > 600)       //na 5 seconden gaat parameters "isRolling" naar loop animatie inplaats van idle
+        if (timer > 5)       //na 5 seconden gaat parameters "isRolling" naar loop animatie inplaats van idle
             animator.SetBool("isRolling", true);
     }
 

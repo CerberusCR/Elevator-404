@@ -10,6 +10,7 @@ TagManager:
   - PickUpable
   - zaklamp
   - WayPoints
+  - Reach
   layers:
   - Default
   - TransparentFX

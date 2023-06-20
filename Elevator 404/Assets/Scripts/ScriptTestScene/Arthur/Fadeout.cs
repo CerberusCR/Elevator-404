@@ -14,8 +14,7 @@ public class Fadeout : MonoBehaviour
 
     public void Start()
     {
-        //hulp nodig
-        //mixer = postprocessingGlobal.GetComponent<Volume>().profile.components[0].;
+        //mixer = postprocessingGlobal.GetComponent<Volume>().profile.components[0].GetComponent<ChannelMixer>();
     }
     public void Update()
     {

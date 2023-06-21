@@ -7489,7 +7489,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eadeca12501a364ab3e5233e044b6aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 6
+  sceneToLoad: 5
+  player: {fileID: 1812275388}
 --- !u!65 &906404608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15333,6 +15334,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.024955697, y: 0.024955695, z: 0.0000000018626476}
   m_Center: {x: 0, y: -9.313224e-10, z: -0.012477848}
+--- !u!1 &1812275388 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4761542230276462853, guid: 436f4a16ac75e2347bd491f6ae3b61e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 349917323}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1816512757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19646,7 +19653,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &8889473692939602064
 MonoBehaviour:
   m_ObjectHideFlags: 0

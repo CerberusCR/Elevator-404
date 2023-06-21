@@ -7,7 +7,7 @@ public class Fadeout2 : MonoBehaviour
 {
     public Image blackscreen;
     public Color imageColor;
-    public float fadeAmount = 0.5f;
+    public float fadeAmount = 1f;
 
     public void Start()
     {
@@ -28,9 +28,10 @@ public class Fadeout2 : MonoBehaviour
 
     public IEnumerator FadeIn()
     {
-        while (true)
+        fadeAmount= 0f;
+        while (fadeAmount < 1)
         {
-            fadeAmount += 0.1f;
+            fadeAmount += Time.deltaTime;
             imageColor = new Color(imageColor.r, imageColor.g, imageColor.b, fadeAmount);
             blackscreen.GetComponent<Image>().color = imageColor;
             yield return null;
@@ -38,9 +39,13 @@ public class Fadeout2 : MonoBehaviour
     }
     public IEnumerator FadeOut()
     {
-        fadeAmount -= 0.1f;
-        imageColor = new Color(imageColor.r, imageColor.g, imageColor.b, fadeAmount);
-        blackscreen.GetComponent<Image>().color = imageColor;
-        yield return null;
+        fadeAmount = 1f;
+        while (fadeAmount > 0)
+        {
+            fadeAmount -= Time.deltaTime;
+            imageColor = new Color(imageColor.r, imageColor.g, imageColor.b, fadeAmount);
+            blackscreen.GetComponent<Image>().color = imageColor;
+            yield return null;
+        }
     }
 }

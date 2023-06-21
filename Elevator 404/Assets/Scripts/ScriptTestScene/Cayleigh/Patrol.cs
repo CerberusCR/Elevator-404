@@ -9,13 +9,39 @@ public class Patrol : MonoBehaviour
     public float distanceToWaypointToBeInRange = 0.1f;
     public float moveSpeed = 1f;
 
+    public Animator animator;
+    private int idleBehaviour;
+    private int rollingBehaviour;
+
+
+
+    private void Start()
+    {
+     animator = GetComponent<Animator>();
+     idleBehaviour = Animator.StringToHash("Idle");
+     rollingBehaviour = Animator.StringToHash("Rolling");
+    }
+
     // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime); // vervang dit met andere movement als je dat wilt.
         transform.LookAt(wayPoints[curWaypoint].position); // vervang dit met andere rotatie als je wilt.
-        if(Vector3.Distance(transform.position, wayPoints[curWaypoint].position) < distanceToWaypointToBeInRange) { 
+        if (Vector3.Distance(transform.position, wayPoints[curWaypoint].position) < distanceToWaypointToBeInRange)
+        {
             curWaypoint = GetNewWaypoint();
+        }
+
+        // Update animations
+        if (moveSpeed > 0f)
+        {
+            animator.SetBool(idleBehaviour, false);
+            animator.SetBool(rollingBehaviour, true);
+        }
+        else
+        {
+            animator.SetBool(idleBehaviour, true);
+            animator.SetBool(rollingBehaviour, false);
         }
     }
 
@@ -29,4 +55,6 @@ public class Patrol : MonoBehaviour
         }
         return newWaypoint;
     }
+
+
 }

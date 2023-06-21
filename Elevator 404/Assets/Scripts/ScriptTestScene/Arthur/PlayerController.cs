@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public RaycastHit hit;
     public GameObject lookingAtObject;
     public Rigidbody rb;
+    
     public float jumpHeight;
     public TMP_Text display;
     public bool inHand;
@@ -110,15 +111,19 @@ public class PlayerController : MonoBehaviour
                     if (inHand)
                     {
                         objectInHand.GetComponent<Rigidbody>().isKinematic = false;
+                        objectInHand.GetComponent<Collider>().enabled = true;
                         objectInHand.transform.position = (cam.transform.position + (hit.point - cam.transform.position) * 0.9f);
                         objectInHand = lookingAtObject;
                         objectInHand.GetComponent<Rigidbody>().isKinematic = true;
+                        objectInHand.GetComponent<Collider>().enabled = false;
+                        
                     }
                     else
                     {
 
                         objectInHand = lookingAtObject;
                         objectInHand.GetComponent<Rigidbody>().isKinematic = true;
+                        objectInHand.GetComponent<Collider>().enabled = false;
                         inHand = true;
                     }
 
@@ -134,6 +139,7 @@ public class PlayerController : MonoBehaviour
                     {
                         inHand = false;
                         objectInHand.GetComponent<Rigidbody>().isKinematic = false;
+                        objectInHand.GetComponent<Collider>().enabled = true;
                         objectInHand.transform.position = (cam.transform.position + (hit.point - cam.transform.position) * 0.9f);
                         objectInHand = null;
                     }
@@ -159,6 +165,7 @@ public class PlayerController : MonoBehaviour
                 {
                     inHand = false;
                     objectInHand.GetComponent<Rigidbody>().isKinematic = false;
+                    objectInHand.GetComponent<Collider>().enabled = true;
                     objectInHand.transform.position = cam.transform.position + cam.transform.forward * 4.5f;
                     objectInHand = null;
                 }
@@ -187,6 +194,15 @@ public class PlayerController : MonoBehaviour
         {
             objectInHand.transform.position = handPosition.transform.position;
             objectInHand.transform.rotation = handPosition.transform.rotation;
+            if (objectInHand.name == "Kermis rifle")
+            {
+                objectInHand.transform.Rotate(new Vector3(0, 180, -90));
+                this.GetComponent<ShootingPewPew>().enabled = true;
+            }
+            else
+            {
+                this.GetComponent<ShootingPewPew>().enabled = false;
+            }
         }
 
 

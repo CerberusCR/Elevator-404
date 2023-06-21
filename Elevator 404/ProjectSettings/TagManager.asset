@@ -11,6 +11,7 @@ TagManager:
   - zaklamp
   - WayPoints
   - Reach
+  - BalloonManager
   layers:
   - Default
   - TransparentFX

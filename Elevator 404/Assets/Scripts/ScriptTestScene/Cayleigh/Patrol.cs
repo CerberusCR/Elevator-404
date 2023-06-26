@@ -9,13 +9,13 @@ public class Patrol : MonoBehaviour
     public float distanceToWaypointToBeInRange = 0.1f;
     public float moveSpeed = 1f;
 
- 
+
 
 
 
     private void Start()
     {
-        
+
     }
 
     // Update is called once per frame

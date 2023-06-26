@@ -37,6 +37,7 @@ public class NPCDialogue : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         player_detection = false;
+        animationController.StopIdleAnimation(); // Stop idle animation when the player exits the NPC's trigger area
     }
 
     void EnableDialogue() 
@@ -44,6 +45,7 @@ public class NPCDialogue : MonoBehaviour
         dialogue.SetActive(true);
         Invoke("DisableDialogue", 13f);
         animationController.PlayTalkAnimation(); // Trigger talk animation using the NPCAnimationController script
+        animationController.StopIdleAnimation(); // Stop idle animation when the player exits the NPC's trigger area
 
     }
 
@@ -51,6 +53,8 @@ public class NPCDialogue : MonoBehaviour
     {
         dialogue.SetActive(false);
         animationController.StopTalkAnimation(); // Stop talk animation using the NPCAnimationController script
+        animationController.PlayIdleAnimation(); // Trigger idle animation when the player enters the NPC's trigger area
+
     }
 }
  

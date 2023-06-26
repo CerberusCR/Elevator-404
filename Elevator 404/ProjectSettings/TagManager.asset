@@ -12,6 +12,7 @@ TagManager:
   - WayPoints
   - Reach
   - BalloonManager
+  - keycode
   layers:
   - Default
   - TransparentFX

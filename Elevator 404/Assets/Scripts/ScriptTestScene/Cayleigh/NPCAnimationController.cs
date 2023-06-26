@@ -8,11 +8,21 @@ public class NPCAnimationController : MonoBehaviour
 
     public void PlayTalkAnimation()
     {
-        npcAnimator.SetBool("IsTalking", true); // Trigger the "IsTalking" parameter in the NPC's animator
+        npcAnimator.SetBool("IsTalking", true);
     }
 
     public void StopTalkAnimation()
     {
-        npcAnimator.SetBool("IsTalking", false); // Disable the "IsTalking" parameter in the NPC's animator
+        npcAnimator.SetBool("IsTalking", false);
+    }
+
+    public void PlayIdleAnimation()
+    {
+        npcAnimator.SetBool("IsIdle", true);
+    }
+
+    public void StopIdleAnimation()
+    {
+        npcAnimator.SetBool("IsIdle", false);
     }
 }

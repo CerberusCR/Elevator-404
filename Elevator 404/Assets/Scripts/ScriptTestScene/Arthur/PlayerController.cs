@@ -103,6 +103,14 @@ public class PlayerController : MonoBehaviour
                     lookingAtObject.GetComponent<Liftknop>().Interact();
                 }
             }
+            else if (lookingAtObject.tag == "keycode")
+            {
+                display.text = "Press E to push this button";
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    lookingAtObject.GetComponent<Keycode>().Interact();
+                }
+            }
             else if (lookingAtObject.tag == "PickUpable")
             {
                 display.text = "Press E to pick this up";
@@ -116,7 +124,7 @@ public class PlayerController : MonoBehaviour
                         objectInHand = lookingAtObject;
                         objectInHand.GetComponent<Rigidbody>().isKinematic = true;
                         objectInHand.GetComponent<Collider>().enabled = false;
-                        
+
                     }
                     else
                     {
@@ -128,7 +136,7 @@ public class PlayerController : MonoBehaviour
                     }
 
                 }
-                
+
             }
             else
             {

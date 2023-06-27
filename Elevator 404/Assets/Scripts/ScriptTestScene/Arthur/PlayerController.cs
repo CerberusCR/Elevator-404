@@ -158,7 +158,7 @@ public class PlayerController : MonoBehaviour
                     {
                         if (objectInHand.name == "zaklamp")
                         {
-                            objectInHand.GetComponentInChildren<Light>().enabled = !objectInHand.GetComponent<Light>().enabled;
+                            objectInHand.transform.GetChild(0).GetComponent<Light>().enabled = !(objectInHand.transform.GetChild(0).GetComponent<Light>().enabled);
                         }
                     }
                 }
@@ -184,7 +184,7 @@ public class PlayerController : MonoBehaviour
                 {
                     if (objectInHand.name == "zaklamp")
                     {
-                        objectInHand.GetComponent<Light>().enabled = !objectInHand.GetComponent<Light>().enabled;
+                        objectInHand.transform.GetChild(0).GetComponent<Light>().enabled = !(objectInHand.transform.GetChild(0).GetComponent<Light>().enabled);
                     }
                 }
             }

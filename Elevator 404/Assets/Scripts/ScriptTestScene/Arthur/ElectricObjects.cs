@@ -25,21 +25,42 @@ public class ElectricObjects : MonoBehaviour
     public bool relaisOn;
     public List<GameObject> switches= new List<GameObject>();
     public ElectricController electricController;
+    public Vector3 rotateSwitchAngle;
+    public Material lampOnMat;
 
     public void Interact()
     {
         if (component == 2) //player controlled switch
         {
             conducting = !conducting;
-            this.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", Color.yellow);
+            if (conducting)
+            {
+                this.transform.Rotate(rotateSwitchAngle);
+            }
+            else
+            {
+                this.transform.Rotate(new Vector3(0, 0, 0) - rotateSwitchAngle);
+            }
+            
+            
         }
         else if (component == 5) //button
         {
             electricController.relais = 1;
             electricController.Calculate();
             this.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", Color.red);
+            StartCoroutine(changebackColor());
         }
     }
+
+    public IEnumerator changebackColor () // remove
+    {
+        yield return new WaitForSeconds(0.5f);
+        this.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", Color.white);
+    }
+
+
+
 
     public void Powered()
     {
@@ -47,7 +68,9 @@ public class ElectricObjects : MonoBehaviour
         if (component == 0) //lamp
         {
             lampOn = true;
-            this.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", Color.red);
+            
+            this.transform.GetChild(0).GetComponent<Light>().enabled = true;
+            GetComponent<Renderer>().material = lampOnMat;
         }
         else if (component == 3) //relais
         {
@@ -66,7 +89,7 @@ public class ElectricObjects : MonoBehaviour
         for (int i = 0; i < switches.Count; i++)
         {
             switches[i].GetComponent<ElectricObjects>().RelaisSwitch();
-            this.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", Color.cyan);
+            
         }
     }
 
@@ -76,7 +99,7 @@ public class ElectricObjects : MonoBehaviour
         for (int i = 0; i < switches.Count; i++)
         {
             switches[i].GetComponent<ElectricObjects>().RelaisSwitch();
-            this.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", Color.green);
+            
         }
     }
 

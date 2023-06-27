@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/titlescreen/titlescreen.unity
     guid: facf2a29d1412144e8093e2e2861eaa5
   - enabled: 1
-    path: Assets/Scenes/office official.unity
+    path: Assets/Scenes/Office Room/office official.unity
     guid: cf05376ff43cfe645928394faabddab5
   - enabled: 1
     path: Assets/Scenes/Kermis Room/Kermis.unity

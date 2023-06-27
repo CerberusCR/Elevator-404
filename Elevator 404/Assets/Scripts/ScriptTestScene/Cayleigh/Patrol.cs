@@ -5,46 +5,70 @@ using UnityEngine;
 
 public class Patrol : MonoBehaviour
 {
-    public Transform[] wayPoints;
-    public int curWaypoint = 0;
-    public float distanceToWaypointToBeInRange = 0.1f;
-    public float moveSpeed = 1f;
-   
-    public Animator animator;
-    private bool isIdle = false;
+       public Transform[] waypoints;  // Array of waypoints to walk to
+    public float walkingSpeed = 2f;  // Walking speed in units per second
+    public float idleTime = 5f;  // Time in seconds for the idle animation
 
+    private Animator animator;
+    private int currentWaypointIndex;
+    private bool isWalking = false;
+    private bool isIdle = false;
+    private float idleTimer = 0f;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        currentWaypointIndex = 0;
+        isWalking = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        animator.SetBool("IsWalking", true); // Set the bool parameter to true to trigger the walking animation.
-
-
-        transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime); // vervang dit met andere movement als je dat wilt.
-        transform.LookAt(wayPoints[curWaypoint].position); // vervang dit met andere rotatie als je wilt.
-        
-        if (Vector3.Distance(transform.position, wayPoints[curWaypoint].position) < distanceToWaypointToBeInRange)
+        if (isWalking)
         {
-            curWaypoint = GetNewWaypoint();
-            animator.SetBool("IsWalking", false); // Set the bool parameter to false to stop the walking animation.
+            // Move towards the current waypoint
+            transform.position = Vector3.MoveTowards(transform.position, waypoints[currentWaypointIndex].position, walkingSpeed * Time.deltaTime);
+
+            // Rotate towards the current waypoint
+            Vector3 targetDirection = waypoints[currentWaypointIndex].position - transform.position;
+            if (targetDirection != Vector3.zero)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 10f * Time.deltaTime);
+            }
+
+            // Check if reached the current waypoint
+            if (Vector3.Distance(transform.position, waypoints[currentWaypointIndex].position) < 0.1f)
+            {
+                isWalking = false;
+                isIdle = true;
+                animator.SetBool("IsWalking", false);
+                animator.SetBool("IsIdle", true);
+                idleTimer = 0f;
+            }
+        }
+        else if (isIdle)
+        {
+            idleTimer += Time.deltaTime;
+
+            if (idleTimer >= idleTime)
+            {
+                isIdle = false;
+                NextWaypoint();
+            }
         }
     }
 
-    int GetNewWaypoint()
+    private void NextWaypoint()
     {
-        int newWaypoint = curWaypoint;
-        while (newWaypoint == curWaypoint)
+        currentWaypointIndex++;
+        if (currentWaypointIndex >= waypoints.Length)
         {
-            newWaypoint = Random.Range(0, wayPoints.Length);
-            print(newWaypoint);
+            currentWaypointIndex = 0;  // Wrap around to the first waypoint
         }
-        return newWaypoint;
+
+        isWalking = true;
+        animator.SetBool("IsWalking", true);
+        animator.SetBool("IsIdle", false);
     }
-
-
 }

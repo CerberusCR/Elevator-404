@@ -326,7 +326,7 @@ Animator:
   m_GameObject: {fileID: 65264457}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eb30bb6507b58284aa6ec6e84924bb6b, type: 2}
+  m_Controller: {fileID: 9100000, guid: c4f6fa2d4a3d7cb4d962ab1ddc1ec159, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -371,7 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e057dbbe9c550004f81fa7eab5697f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wayPoints:
+  waypoints:
   - {fileID: 1018950349}
   - {fileID: 829603427}
   - {fileID: 1376300044}
@@ -380,10 +380,8 @@ MonoBehaviour:
   - {fileID: 1632651562}
   - {fileID: 1924557716}
   - {fileID: 1274732162}
-  curWaypoint: 0
-  distanceToWaypointToBeInRange: 0.1
-  moveSpeed: 1
-  animator: {fileID: 65264459}
+  walkingSpeed: 2
+  idleTime: 5
 --- !u!1 &101498869
 GameObject:
   m_ObjectHideFlags: 0

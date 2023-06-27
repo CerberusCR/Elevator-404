@@ -383,6 +383,7 @@ MonoBehaviour:
   curWaypoint: 0
   distanceToWaypointToBeInRange: 0.1
   moveSpeed: 1
+  animator: {fileID: 65264459}
 --- !u!1 &101498869
 GameObject:
   m_ObjectHideFlags: 0

@@ -6083,7 +6083,7 @@ PrefabInstance:
         type: 3}
       propertyPath: audioSource
       value: 
-      objectReference: {fileID: 1676513446}
+      objectReference: {fileID: 0}
     - target: {fileID: 4817741858647970778, guid: 7e9d9857e1e71404f9de38f6d821233c,
         type: 3}
       propertyPath: confetti

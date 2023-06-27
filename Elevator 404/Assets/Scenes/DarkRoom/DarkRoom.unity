@@ -202,6 +202,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6ad93ee78164c04983ba3d09eb01880, type: 3}
+--- !u!1 &85348710 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f97c6a8f3ca859b4f977ba96a41d990c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1425679919}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &85348714
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85348710}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4999995, y: 1, z: 2.5}
+  m_Center: {x: 0, y: -0.5, z: 1.257158}
 --- !u!1001 &88181490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -306,6 +325,7 @@ MonoBehaviour:
   switches: []
   electricController: {fileID: 1757506012}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 0}
 --- !u!65 &158008117
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -512,6 +532,7 @@ MonoBehaviour:
   switches: []
   electricController: {fileID: 405381032}
   rotateSwitchAngle: {x: 0, y: 30, z: 0}
+  lampOnMat: {fileID: 0}
 --- !u!65 &214428859
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -563,6 +584,7 @@ MonoBehaviour:
   switches: []
   electricController: {fileID: 1906201581}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 0}
 --- !u!1001 &275757190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -701,7 +723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f97c6a8f3ca859b4f977ba96a41d990c, type: 3}
---- !u!1 &298455207
+--- !u!1 &308555602
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -709,23 +731,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 298455210}
-  - component: {fileID: 298455209}
-  - component: {fileID: 298455208}
+  - component: {fileID: 308555603}
+  - component: {fileID: 308555605}
+  - component: {fileID: 308555604}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &298455208
+--- !u!4 &308555603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308555602}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0.7071068, w: 0}
+  m_LocalPosition: {x: 0.001, y: -0.006, z: 0.21}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 415689982}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &308555604
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298455207}
+  m_GameObject: {fileID: 308555602}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
@@ -739,21 +776,21 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
---- !u!108 &298455209
+--- !u!108 &308555605
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298455207}
-  m_Enabled: 1
+  m_GameObject: {fileID: 308555602}
+  m_Enabled: 0
   serializedVersion: 10
-  m_Type: 1
+  m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.032395888, g: 0.9811321, b: 0.11286863, a: 1}
   m_Intensity: 1
   m_Range: 10
-  m_SpotAngle: 30
+  m_SpotAngle: 79.882095
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
@@ -801,21 +838,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!4 &298455210
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298455207}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: -5.1814404, y: -3.2241573, z: 8.679026}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 39
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &309964044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -831,7 +853,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 526842413c8274941b5ac011e8295196,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.676
+      value: -0.655
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 526842413c8274941b5ac011e8295196,
         type: 3}
@@ -841,7 +863,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 526842413c8274941b5ac011e8295196,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.033
+      value: 0.093
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 526842413c8274941b5ac011e8295196,
         type: 3}
@@ -999,6 +1021,7 @@ MonoBehaviour:
   switches: []
   electricController: {fileID: 405381032}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 0}
 --- !u!1 &334707450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,7 +1129,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 3
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -1139,6 +1162,26 @@ MonoBehaviour:
   switches: []
   electricController: {fileID: 405381032}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 0}
+--- !u!1 &353153889 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f97c6a8f3ca859b4f977ba96a41d990c,
+    type: 3}
+  m_PrefabInstance: {fileID: 275757190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &353153893
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353153889}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4999995, y: 1, z: 2.5000005}
+  m_Center: {x: 0, y: -0.5, z: 1.2571584}
 --- !u!1 &405381029
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,7 +1212,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &405381032
 MonoBehaviour:
@@ -1224,7 +1267,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 02843bbb44a84d446b090f5a197af068,
         type: 3}
       propertyPath: m_RootOrder
-      value: 34
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 02843bbb44a84d446b090f5a197af068,
         type: 3}
@@ -1318,6 +1361,7 @@ MonoBehaviour:
   switches: []
   electricController: {fileID: 1757506012}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 2100000, guid: fa251c08e8b0ebe4ca0352968ae1bea6, type: 2}
 --- !u!65 &415689979
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1331,6 +1375,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.19720179, y: 0.19720149, z: 0.2940656}
   m_Center: {x: 0.00018656254, y: 0.00013213605, z: 0.14781758}
+--- !u!4 &415689982 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 729ebd1b7bd73cc4aa021401f5cefac0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1350561697}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &435599805
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1646,6 +1696,7 @@ MonoBehaviour:
   switches: []
   electricController: {fileID: 1906201581}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 0}
 --- !u!1001 &545919636
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1755,6 +1806,7 @@ MonoBehaviour:
   switches: []
   electricController: {fileID: 405381032}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 0}
 --- !u!1001 &561231506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1874,6 +1926,7 @@ MonoBehaviour:
   switches: []
   electricController: {fileID: 405381032}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 0}
 --- !u!65 &561231512
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1925,6 +1978,7 @@ MonoBehaviour:
   switches: []
   electricController: {fileID: 1906201581}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 0}
 --- !u!1001 &595501812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2004,6 +2058,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 729ebd1b7bd73cc4aa021401f5cefac0,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 729ebd1b7bd73cc4aa021401f5cefac0,
+        type: 3}
       propertyPath: m_TagString
       value: component
       objectReference: {fileID: 0}
@@ -2034,6 +2093,7 @@ MonoBehaviour:
   switches: []
   electricController: {fileID: 405381032}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 2100000, guid: fa251c08e8b0ebe4ca0352968ae1bea6, type: 2}
 --- !u!4 &595501817 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 729ebd1b7bd73cc4aa021401f5cefac0,
@@ -2149,6 +2209,26 @@ MonoBehaviour:
   switches: []
   electricController: {fileID: 405381032}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 0}
+--- !u!1 &683386886 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f97c6a8f3ca859b4f977ba96a41d990c,
+    type: 3}
+  m_PrefabInstance: {fileID: 296781553}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &683386890
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683386886}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4999995, y: 1, z: 2.5000005}
+  m_Center: {x: 0, y: -0.5, z: 1.2571584}
 --- !u!1001 &720141033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2228,6 +2308,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa66348aeeeeb9245bb4bac301b6fcc5, type: 3}
+--- !u!1 &807114367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f97c6a8f3ca859b4f977ba96a41d990c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1183249419}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &807114371
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807114367}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4999995, y: 1, z: 2.5}
+  m_Center: {x: 0, y: -0.5, z: 1.257158}
 --- !u!1001 &1183249419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2317,6 +2416,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f97c6a8f3ca859b4f977ba96a41d990c, type: 3}
+--- !u!1 &1199651416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1199651418}
+  - component: {fileID: 1199651417}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1199651417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199651416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462ae52af7e2dd9458e1bca77f502bda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  component: 0
+  conducting: 0
+  lampOn: 0
+  relaisOn: 0
+  switches: []
+  electricController: {fileID: 0}
+  rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 0}
+  lampOn2: 0
+  onMat: {fileID: 0}
+  offMat: {fileID: 0}
+  myState: 1346273
+  state: 1
+--- !u!4 &1199651418
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199651416}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.745777, y: 0.24384427, z: 11.976098}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 39
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1201847879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2434,6 +2590,7 @@ MonoBehaviour:
   switches: []
   electricController: {fileID: 1906201581}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 0}
 --- !u!1 &1231973061 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b6ad93ee78164c04983ba3d09eb01880,
@@ -2472,6 +2629,7 @@ MonoBehaviour:
   switches: []
   electricController: {fileID: 1906201581}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 0}
 --- !u!1 &1282239019 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b6ad93ee78164c04983ba3d09eb01880,
@@ -2497,6 +2655,7 @@ MonoBehaviour:
   switches: []
   electricController: {fileID: 405381032}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 0}
 --- !u!65 &1282239024
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2548,6 +2707,7 @@ MonoBehaviour:
   switches: []
   electricController: {fileID: 1906201581}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 0}
 --- !u!1001 &1350561697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2736,6 +2896,7 @@ MonoBehaviour:
   switches: []
   electricController: {fileID: 405381032}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 0}
 --- !u!1001 &1376892177
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3083,6 +3244,7 @@ MonoBehaviour:
   - {fileID: 336594324}
   electricController: {fileID: 405381032}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 0}
 --- !u!1001 &1526242332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3192,6 +3354,7 @@ MonoBehaviour:
   switches: []
   electricController: {fileID: 405381032}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 0}
 --- !u!1 &1526683135 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 729ebd1b7bd73cc4aa021401f5cefac0,
@@ -3217,6 +3380,7 @@ MonoBehaviour:
   switches: []
   electricController: {fileID: 1757506012}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 0}
 --- !u!65 &1526683143
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3423,6 +3587,7 @@ MonoBehaviour:
   switches: []
   electricController: {fileID: 1757506012}
   rotateSwitchAngle: {x: 0, y: 90, z: 0}
+  lampOnMat: {fileID: 0}
 --- !u!65 &1671900255
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3665,6 +3830,7 @@ MonoBehaviour:
   switches: []
   electricController: {fileID: 405381032}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 0}
 --- !u!65 &1688133139
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4151,8 +4317,27 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.5000007, y: 0.0000005960465, z: 2.5000005}
-  m_Center: {x: 8.319174e-24, y: -0.00000029972986, z: 1.2571584}
+  m_Size: {x: 2.5000007, y: 1, z: 2.5}
+  m_Center: {x: 8.319174e-24, y: -0.5, z: 1.2571584}
+--- !u!1 &1881690779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f97c6a8f3ca859b4f977ba96a41d990c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1533631137}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1881690783
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881690779}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4999995, y: 0, z: 2.5}
+  m_Center: {x: 0, y: 0, z: 1.257158}
 --- !u!1 &1906201580
 GameObject:
   m_ObjectHideFlags: 0
@@ -4245,7 +4430,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972737624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.005, y: 0.001, z: 0.298}
+  m_LocalPosition: {x: -0.005, y: 0.001, z: 0.205}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4279,11 +4464,11 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972737624}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
-  m_Type: 0
+  m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.032395888, g: 0.9811321, b: 0.11286863, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 79.882095
@@ -4444,6 +4629,7 @@ MonoBehaviour:
   - {fileID: 561231507}
   electricController: {fileID: 405381032}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 0}
 --- !u!1001 &2056824126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4594,6 +4780,7 @@ MonoBehaviour:
   switches: []
   electricController: {fileID: 1906201581}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 0}
 --- !u!65 &2122786013
 BoxCollider:
   m_ObjectHideFlags: 0

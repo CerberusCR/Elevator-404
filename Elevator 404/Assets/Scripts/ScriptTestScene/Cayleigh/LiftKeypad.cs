@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class LiftKeypad : MonoBehaviour
 {
-    public Animator npcAnimator; // Reference to the NPC's Animator component
+    public Animator animator; // Reference to the NPC's Animator component
 
     public void PlayOpen()
     {
-        npcAnimator.SetBool("IsOpen", true);
+        animator.SetBool("IsOpen", true);
+    }
+
+    public void NotOpen()
+    {
+        animator.SetBool("IsOpen", false);
     }
 
     public void PlayClose()
     {
-        npcAnimator.SetBool("IsClose", true);
+        animator.SetBool("IsCLose", true);
     }
+
+    public void NotClose()
+    {
+        animator.SetBool("IsClose", false);
+    }
+
 }

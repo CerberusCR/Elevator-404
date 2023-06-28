@@ -13,20 +13,26 @@ public class PassCode : MonoBehaviour
     string aplha;
     public Text UiText = null;
 
-    public LiftKeypad AnimationDoor;
+    public LiftKeypad animationDoor;
 
+
+    private void Start()
+    {
+       // animationDoor.NotClose();
+    }
     public void CodeFunction(string Numbers)
     {
         NrIndex++;
         Nr = Nr + Numbers;
-        UiText.text = Nr;   
+        UiText.text = Nr;
+        //animationDoor.NotClose();
     }
     public void Enter()
     {
         if (Nr == code)
         {
             Debug.Log("It's working");
-            
+            animationDoor.PlayOpen();
         }
     }
     public void Delete() 

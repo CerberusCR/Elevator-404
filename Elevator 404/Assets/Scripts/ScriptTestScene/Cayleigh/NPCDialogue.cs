@@ -7,6 +7,7 @@ public class NPCDialogue : MonoBehaviour
     bool player_detection = false;
     public GameObject dialogue;
     public NPCAnimationController animationController; // Reference to the NPCAnimationController script
+    public AudioSource audioSource;  // Reference to the audio source
 
     void Update()
     {
@@ -15,10 +16,11 @@ public class NPCDialogue : MonoBehaviour
             EnableDialogue();
             Debug.Log("werkt");
         }
-        else if(!player_detection)
+        else if (!player_detection)
         {
             DisableDialogue();
         }
+
         // Check if Escape key is pressed
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -38,24 +40,25 @@ public class NPCDialogue : MonoBehaviour
     {
         player_detection = false;
         animationController.StopIdleAnimation(); // Stop idle animation when the player exits the NPC's trigger area
+        DisableDialogue(); // Stop the dialogue and audio when the player exits the NPC's trigger area
     }
 
-    void EnableDialogue() 
+    void EnableDialogue()
     {
         dialogue.SetActive(true);
+        audioSource.Play(); // Start playing the audio
         Invoke("DisableDialogue", 13f);
         animationController.PlayTalkAnimation(); // Trigger talk animation using the NPCAnimationController script
         animationController.StopIdleAnimation(); // Stop idle animation when the player exits the NPC's trigger area
-
     }
 
     void DisableDialogue()
     {
         dialogue.SetActive(false);
+        audioSource.Stop(); // Stop playing the audio
         animationController.StopTalkAnimation(); // Stop talk animation using the NPCAnimationController script
         animationController.PlayIdleAnimation(); // Trigger idle animation when the player enters the NPC's trigger area
-
     }
 }
- 
+
 

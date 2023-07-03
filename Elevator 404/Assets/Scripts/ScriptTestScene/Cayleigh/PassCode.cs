@@ -12,9 +12,11 @@ public class PassCode : MonoBehaviour
     int NrIndex = 0;
     string aplha;
     public Text UiText = null;
+    public GameObject liftBlock;
 
     public LiftKeypad animationDoor;
 
+    public GameObject Keypad;
 
     private void Start()
     {
@@ -33,6 +35,11 @@ public class PassCode : MonoBehaviour
         {
             Debug.Log("It's working");
             animationDoor.PlayOpen();
+            liftBlock.SetActive(false);
+            Keypad.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Time.timeScale = 1f;
+
         }
     }
     public void Delete() 

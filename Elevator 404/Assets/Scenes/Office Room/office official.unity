@@ -4026,7 +4026,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &219945990
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35551,8 +35551,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "TUTORIAL:\nWASD = Walking\nSpace bar = Jumping\nE = Interacting\nEscape
-    = Pause menu\nF = Exit works only on keypad\n\nHint:\n\"From left to right count
-    what is on\n to proceed\""
+    = Pause menu\nF = Exit interaction\n\nHint:\n\"From left to right count what
+    is on\n to proceed\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2984c03b74e8ce74ab1471c2049b2c64, type: 2}
   m_sharedMaterial: {fileID: 991332159952347903, guid: 2984c03b74e8ce74ab1471c2049b2c64,

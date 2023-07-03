@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class Lamp : ElectricObjects
 {
 
@@ -73,4 +73,6 @@ public class Lamp : ElectricObjects
             GetComponent<Renderer>().material = offMat;
         }
     }
+
 }
+*/

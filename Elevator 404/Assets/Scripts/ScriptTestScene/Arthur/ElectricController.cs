@@ -68,11 +68,12 @@ public class ElectricController : MonoBehaviour
             }
             relais--;
         }
-        RelaisReset();
+        StartCoroutine(RelaisReset());
     }
 
-    public void RelaisReset()
+    public IEnumerator RelaisReset()
     {
+        yield return new WaitForSeconds(0.5f);
         for (int i = 0; i < RelaisToReset.Count; i++)
         {
             RelaisToReset[i].GetComponent<ElectricObjects>().RelaisReset();

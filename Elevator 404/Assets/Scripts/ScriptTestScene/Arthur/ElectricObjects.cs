@@ -53,7 +53,7 @@ public class ElectricObjects : MonoBehaviour
         }
     }
 
-    public IEnumerator changebackColor () // remove
+    public IEnumerator changebackColor ()
     {
         yield return new WaitForSeconds(0.5f);
         this.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", Color.white);
@@ -80,6 +80,7 @@ public class ElectricObjects : MonoBehaviour
                 electricController.RelaisToReset.Add(this.gameObject);
                 relaisOn = true;
                 Relais();
+                
             }
         }
     }
@@ -106,5 +107,13 @@ public class ElectricObjects : MonoBehaviour
     public void RelaisSwitch()
     {
         conducting = !conducting;
+        if (conducting)
+        {
+            this.transform.Rotate(rotateSwitchAngle);
+        }
+        else
+        {
+            this.transform.Rotate(new Vector3(0, 0, 0) - rotateSwitchAngle);
+        }
     }
 }

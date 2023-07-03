@@ -25,7 +25,7 @@ public class NextScene : MonoBehaviour
     public void Play()
     {
         //print("hi");
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(6);
     }
 
     public void ExitGame()

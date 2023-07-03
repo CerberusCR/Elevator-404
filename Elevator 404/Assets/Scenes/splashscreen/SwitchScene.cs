@@ -7,6 +7,7 @@ public class SwitchScene : MonoBehaviour
 {
 
     public float time;
+    
 
     public void Start()
     {

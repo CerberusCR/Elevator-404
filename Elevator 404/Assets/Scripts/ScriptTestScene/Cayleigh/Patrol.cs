@@ -9,7 +9,7 @@ public class Patrol : MonoBehaviour
     public int curWaypoint = 0;
     public float distanceToWaypointToBeInRange = 0.1f;
     public Animator animatorIdleOrRolling;
-    public float moveSpeed = 1f;
+    public float moveSpeed = 3f;
     
     private bool holding = false;
     private bool AnimationStarted = false;

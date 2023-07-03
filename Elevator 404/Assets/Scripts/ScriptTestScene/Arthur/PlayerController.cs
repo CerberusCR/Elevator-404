@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.Burst.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR;
 
@@ -109,6 +110,28 @@ public class PlayerController : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     lookingAtObject.GetComponent<Keycode>().Interact();
+                }
+            }
+            else if (lookingAtObject.tag == "SnapToKeyPad")
+            {
+                display.text = "Find a Button to continue";
+                if (inHand)
+                {
+                    if (objectInHand.name == "Lift_knop")
+                    {
+                        display.text = "Press E to place the Button";
+                        if (Input.GetKeyDown(KeyCode.E))
+                        {
+                            inHand = false;
+                            objectInHand.transform.position = lookingAtObject.transform.GetChild(0).gameObject.transform.position;
+                            objectInHand.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
+                            objectInHand.transform.Rotate(new Vector3(-90,0,0));
+                            objectInHand.transform.localScale = new Vector3(1f, 1f, 1f);
+                            objectInHand.tag = "liftknop";
+                            objectInHand.GetComponent<Collider>().enabled = true;
+                            objectInHand = null;
+                        }
+                    }
                 }
             }
             else if (lookingAtObject.tag == "PickUpable")

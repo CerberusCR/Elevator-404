@@ -130,6 +130,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4761542229257391203, guid: 436f4a16ac75e2347bd491f6ae3b61e9,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 4761542230276462842, guid: 436f4a16ac75e2347bd491f6ae3b61e9,
         type: 3}
       propertyPath: m_RootOrder
@@ -372,7 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: 1
-  player: {fileID: 0}
+  player: {fileID: 19937955}
 --- !u!135 &141780407
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1480,7 +1485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: 0
-  player: {fileID: 0}
+  player: {fileID: 19937955}
 --- !u!65 &1074146504
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2646,6 +2651,8 @@ MonoBehaviour:
   relaisOn: 0
   switches: []
   electricController: {fileID: 1329283837}
+  rotateSwitchAngle: {x: 0, y: 0, z: 0}
+  lampOnMat: {fileID: 0}
 --- !u!1001 &2033148861
 PrefabInstance:
   m_ObjectHideFlags: 0

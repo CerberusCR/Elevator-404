@@ -7,7 +7,7 @@ using UnityEngine.Audio;
 
 public class PassCode : MonoBehaviour
 {
-    string code = "1234";
+    string code = "2513";
     string Nr = null;
     int NrIndex = 0;
     string aplha;
@@ -18,14 +18,14 @@ public class PassCode : MonoBehaviour
 
     private void Start()
     {
-       // animationDoor.NotClose();
+
     }
     public void CodeFunction(string Numbers)
     {
         NrIndex++;
         Nr = Nr + Numbers;
         UiText.text = Nr;
-        //animationDoor.NotClose();
+        
     }
     public void Enter()
     {

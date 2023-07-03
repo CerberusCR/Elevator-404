@@ -21,10 +21,13 @@ public class KeypadActivate : MonoBehaviour
         {
             Keypad.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0f;
         }
+
         else if (!Detect) 
         {
             Keypad.SetActive(false);
+            
         }
         // Check if Escape key is pressed
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -32,6 +35,15 @@ public class KeypadActivate : MonoBehaviour
             Keypad.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
         }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Keypad.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Time.timeScale = 1f;
+        }
+
+
 
     }
     private void OnTriggerEnter(Collider other)

@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 {
     public Vector3 move;
     public Vector3 cameraDraaien1;
+    public bool controllDisplay;
     
     public float h;
     public float v;
@@ -106,11 +107,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (lookingAtObject.tag == "keycode")
             {
-                display.text = "Press E to push this button";
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    lookingAtObject.GetComponent<Keycode>().Interact();
-                }
+                display.text = "Press E to enter the code";
             }
             else if (lookingAtObject.tag == "SnapToKeyPad")
             {
@@ -125,7 +122,7 @@ public class PlayerController : MonoBehaviour
                             inHand = false;
                             objectInHand.transform.position = lookingAtObject.transform.GetChild(0).gameObject.transform.position;
                             objectInHand.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
-                            objectInHand.transform.Rotate(new Vector3(-90,0,0));
+                            objectInHand.transform.Rotate(new Vector3(-90, 0, 0));
                             objectInHand.transform.localScale = new Vector3(1f, 1f, 1f);
                             objectInHand.tag = "liftknop";
                             objectInHand.GetComponent<Collider>().enabled = true;
@@ -163,7 +160,10 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
+                
                 display.text = "";
+                
+
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     if (inHand)
@@ -189,7 +189,9 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            
             display.text = "";
+            
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (inHand)

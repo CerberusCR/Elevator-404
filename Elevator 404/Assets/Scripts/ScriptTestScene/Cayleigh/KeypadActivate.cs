@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class KeypadActivate : MonoBehaviour
 {
+    public TMP_Text display;
     public GameObject Keypad;
-    bool Detect = false;
+    public bool Detect = false;
     public LiftKeypad AnimationDoor;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +22,7 @@ public class KeypadActivate : MonoBehaviour
     {
         if (Detect && Input.GetKeyDown(KeyCode.E))
         {
+            
             Keypad.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0f;
@@ -51,6 +55,9 @@ public class KeypadActivate : MonoBehaviour
         if (other.name == "PlayerWithCrosshair")
         {
             Detect = true;
+            //display.text = "Press E to enter the code";
+            
+            //player.GetComponent<PlayerController>().controllDisplay = false;
         }
     }
 
@@ -58,6 +65,9 @@ public class KeypadActivate : MonoBehaviour
     {
         Detect = false;
         Cursor.lockState = CursorLockMode.Locked;
+        //display.text = "";
+        
+        //player.GetComponent<PlayerController>().controllDisplay = true;
     }
 
 

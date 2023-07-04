@@ -11620,6 +11620,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 601946324}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &603322270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1453d273f281dba479a044d523702649,
+    type: 3}
+  m_PrefabInstance: {fileID: 766719525}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &603322274
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603322270}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019999994, y: 0.019999998, z: 0.00033688883}
+  m_Center: {x: 0.000000014901161, y: 1.968627e-11, z: -0.00016844319}
 --- !u!1001 &606750737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13381,6 +13400,25 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &675566959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1453d273f281dba479a044d523702649,
+    type: 3}
+  m_PrefabInstance: {fileID: 534913437}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &675566962
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675566959}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019999994, y: 0.019999998, z: 0.00033688883}
+  m_Center: {x: 0.000000012456439, y: 1.968627e-11, z: -0.00016845064}
 --- !u!1001 &676245616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15182,6 +15220,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 769941323}
   m_CullTransparentMesh: 1
+--- !u!1 &770952160 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1453d273f281dba479a044d523702649,
+    type: 3}
+  m_PrefabInstance: {fileID: 162013550}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &770952164
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770952160}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019999994, y: 0.019999998, z: 0.00033688883}
+  m_Center: {x: 0.000000014901161, y: 1.968627e-11, z: -0.00016844692}
 --- !u!1001 &772046170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16419,6 +16476,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c420a77470ad46640bfd396fa9ce547a, type: 3}
+--- !u!1 &856797757 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1453d273f281dba479a044d523702649,
+    type: 3}
+  m_PrefabInstance: {fileID: 1446064331}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &859555854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17597,6 +17660,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: office box 404
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cb68669ba7ba8f24781f83c62fee06ac,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb68669ba7ba8f24781f83c62fee06ac, type: 3}
@@ -20936,6 +21004,19 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1446064331}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1028043497
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856797757}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019999994, y: 0.019999998, z: 0.00033688883}
+  m_Center: {x: 0.000000012456439, y: 1.968627e-11, z: -0.00016844319}
 --- !u!1 &1030523029 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 03aa3136a8a5ba84c941a56c75ad2a06,
@@ -25551,6 +25632,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1453d273f281dba479a044d523702649, type: 3}
+--- !u!1 &1199169213 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1453d273f281dba479a044d523702649,
+    type: 3}
+  m_PrefabInstance: {fileID: 1275778472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1199169216
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199169213}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019999994, y: 0.019999998, z: 0.00033688883}
+  m_Center: {x: 0.000000012456439, y: 1.968627e-11, z: -0.00016844692}
 --- !u!1001 &1203072699
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31899,6 +31999,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: office box 404 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cb68669ba7ba8f24781f83c62fee06ac,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb68669ba7ba8f24781f83c62fee06ac, type: 3}
 --- !u!1001 &1526624447
@@ -37868,6 +37973,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 349917323}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1812275396
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812275388}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1816512757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39544,6 +39662,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: office box 404 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cb68669ba7ba8f24781f83c62fee06ac,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb68669ba7ba8f24781f83c62fee06ac, type: 3}
@@ -44527,6 +44650,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: office box 404 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cb68669ba7ba8f24781f83c62fee06ac,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb68669ba7ba8f24781f83c62fee06ac, type: 3}
 --- !u!1001 &2069431379
@@ -44743,7 +44871,7 @@ GameObject:
   - component: {fileID: 2075130568}
   m_Layer: 0
   m_Name: 'box box barrier, vanilla. '
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46076,6 +46204,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8660e689f9cc784786c24762b2038c3, type: 3}
+--- !u!1 &2120462513 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1453d273f281dba479a044d523702649,
+    type: 3}
+  m_PrefabInstance: {fileID: 1777143390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2120462517
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120462513}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019999994, y: 0.019999998, z: 0.00033688883}
+  m_Center: {x: 0.000000014901161, y: 1.968627e-11, z: -0.00016845064}
 --- !u!1001 &2124447034
 PrefabInstance:
   m_ObjectHideFlags: 0

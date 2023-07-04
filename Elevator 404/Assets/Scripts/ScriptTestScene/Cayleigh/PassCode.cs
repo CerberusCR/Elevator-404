@@ -18,6 +18,8 @@ public class PassCode : MonoBehaviour
 
     public GameObject Keypad;
 
+    public AudioSource elavatorDing;
+
     private void Start()
     {
 
@@ -39,6 +41,7 @@ public class PassCode : MonoBehaviour
             Keypad.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             Time.timeScale = 1f;
+            elavatorDing.Play();
 
         }
     }

@@ -8,10 +8,14 @@ public class Liftknop : MonoBehaviour
 {
     public int sceneToLoad;
     public GameObject player;
+    public bool onStartOff;
 
     public void Start()
     {
-        StartCoroutine(player.GetComponentInChildren<Canvas>().GetComponent<Fadeout2>().FadeOut());
+        if (onStartOff == false)
+        {
+            StartCoroutine(player.GetComponentInChildren<Canvas>().GetComponent<Fadeout2>().FadeOut());
+        }
     }
     public void Interact()
     {

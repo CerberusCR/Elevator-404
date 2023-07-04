@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     public bool inHand;
     public GameObject objectInHand;
     public GameObject handPosition;
+    public bool hasBeenInteractedWith;
     
 
 
@@ -111,7 +112,10 @@ public class PlayerController : MonoBehaviour
             }
             else if (lookingAtObject.tag == "SnapToKeyPad")
             {
-                display.text = "Find a Button to continue";
+                if (hasBeenInteractedWith == false)
+                {
+                    display.text = "Find a Button to continue";
+                }
                 if (inHand)
                 {
                     if (objectInHand.name == "Lift_knop")
@@ -119,10 +123,12 @@ public class PlayerController : MonoBehaviour
                         display.text = "Press E to place the Button";
                         if (Input.GetKeyDown(KeyCode.E))
                         {
+                            hasBeenInteractedWith = true;
+                            display.text = "";
                             inHand = false;
                             objectInHand.transform.position = lookingAtObject.transform.GetChild(0).gameObject.transform.position;
                             objectInHand.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
-                            objectInHand.transform.Rotate(new Vector3(-90, 0, 0));
+                            objectInHand.transform.Rotate(new Vector3(90, 0, 0));
                             objectInHand.transform.localScale = new Vector3(1f, 1f, 1f);
                             objectInHand.tag = "liftknop";
                             objectInHand.GetComponent<Collider>().enabled = true;

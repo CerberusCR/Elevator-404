@@ -26,7 +26,7 @@ public class BalloonManager : MonoBehaviour
     private void GrantKeyReward()
     {
         // Instantiate the key reward object at the prizeSpawnPoint position
-        Instantiate(keyReward, prizeSpawnPoint.position, prizeSpawnPoint.rotation);
+        keyReward.SetActive(true);
 
         // You can also perform additional actions here, like playing a sound or displaying a message
 

@@ -1063,7 +1063,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: cb68669ba7ba8f24781f83c62fee06ac,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.03
+      value: -2.98
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cb68669ba7ba8f24781f83c62fee06ac,
         type: 3}
@@ -1073,7 +1073,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: cb68669ba7ba8f24781f83c62fee06ac,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.72
+      value: -17.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cb68669ba7ba8f24781f83c62fee06ac,
         type: 3}
@@ -35453,7 +35453,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5495902117074765545, guid: cb68669ba7ba8f24781f83c62fee06ac, type: 3}
 --- !u!54 &1621834185
@@ -35470,7 +35470,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 32
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!1001 &1628538367
 PrefabInstance:

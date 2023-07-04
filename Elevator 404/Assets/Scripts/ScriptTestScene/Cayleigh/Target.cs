@@ -19,10 +19,12 @@ public class Target : MonoBehaviour
         health -= amount;
         if (health <= 0f)
         {
-            GameObject deathConfetti = Instantiate(confetti,transform.position, Quaternion.identity);
+            Vector3 offset = new Vector3(0f, 0.3f, 0f);
+            GameObject deathConfetti = Instantiate(confetti,transform.position + offset, Quaternion.identity);
             Destroy(deathConfetti, 1); //Destroys it after 1 seconds.
             Destroy(gameObject);
         }
+
     
     }
 }

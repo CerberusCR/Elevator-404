@@ -110,6 +110,10 @@ public class PlayerController : MonoBehaviour
             {
                 display.text = "Press E to enter the code";
             }
+            else if (lookingAtObject.tag == "praathond")
+            {
+                display.text = "Press E to talk with this dog";
+            }
             else if (lookingAtObject.tag == "SnapToKeyPad")
             {
                 if (hasBeenInteractedWith == false)
@@ -144,6 +148,10 @@ public class PlayerController : MonoBehaviour
                 {
                     if (inHand)
                     {
+                        if (objectInHand.name == "Kermis rifle")
+                        {
+                            this.GetComponent<ShootingPewPew>().enabled = false;
+                        }
                         objectInHand.GetComponent<Rigidbody>().isKinematic = false;
                         objectInHand.GetComponent<Collider>().enabled = true;
                         objectInHand.transform.position = (cam.transform.position + (hit.point - cam.transform.position) * 0.9f);
@@ -166,14 +174,18 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                
+
                 display.text = "";
-                
+
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     if (inHand)
                     {
+                        if (objectInHand.name == "Kermis rifle")
+                        {
+                            this.GetComponent<ShootingPewPew>().enabled = false;
+                        }
                         inHand = false;
                         objectInHand.GetComponent<Rigidbody>().isKinematic = false;
                         objectInHand.GetComponent<Collider>().enabled = true;
@@ -238,13 +250,7 @@ public class PlayerController : MonoBehaviour
                 objectInHand.transform.Rotate(new Vector3(0, 180, -90));
                 this.GetComponent<ShootingPewPew>().enabled = true;
             }
-            else
-            {
-                this.GetComponent<ShootingPewPew>().enabled = false;
-            }
         }
-
-
 
     }
 }

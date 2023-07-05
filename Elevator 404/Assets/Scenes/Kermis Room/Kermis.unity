@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.30679834, g: 0.6225815, b: 0.85527456, a: 1}
+  m_IndirectSpecularColor: {r: 0.30678752, g: 0.6231803, b: 0.85559475, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5630,6 +5630,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OutOfOrderDog
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d26dca22e0762f540a30ccfa022f0fcd,
+        type: 3}
+      propertyPath: m_TagString
+      value: praathond
       objectReference: {fileID: 0}
     - target: {fileID: 8743813690021804245, guid: d26dca22e0762f540a30ccfa022f0fcd,
         type: 3}
@@ -31509,6 +31514,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NPCDog
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d26dca22e0762f540a30ccfa022f0fcd,
+        type: 3}
+      propertyPath: m_TagString
+      value: praathond
       objectReference: {fileID: 0}
     - target: {fileID: 8743813690021804245, guid: d26dca22e0762f540a30ccfa022f0fcd,
         type: 3}

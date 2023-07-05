@@ -8,6 +8,8 @@ public class ShootingPewPew : MonoBehaviour
     public Camera fpsCam;
     public AudioSource gunShot;
 
+    public GameObject pauzeMenu;
+
     // Update is called once per frame
     void Update()
     {
@@ -20,6 +22,7 @@ public class ShootingPewPew : MonoBehaviour
                 //Luuk may not be impressed but I got the drippy code sheeeeesh
     void Shoot()
     {
+        if (pauzeMenu.activeSelf == true) { return; }
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit))
         {

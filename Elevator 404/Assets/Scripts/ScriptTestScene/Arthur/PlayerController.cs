@@ -234,11 +234,11 @@ public class PlayerController : MonoBehaviour
         }
 
         //springen
-        if (Input.GetKeyDown(KeyCode.Space) && onGround)
-        {
-            rb.AddForce(transform.up * jumpHeight, ForceMode.Impulse);
-            onGround = false;
-        }
+        //if (Input.GetKeyDown(KeyCode.Space) && onGround)
+        //{
+            //rb.AddForce(transform.up * jumpHeight, ForceMode.Impulse);
+            //onGround = false;
+       // }
 
         //pickup
         if (inHand == true)

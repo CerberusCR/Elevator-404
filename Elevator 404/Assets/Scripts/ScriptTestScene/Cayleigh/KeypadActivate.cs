@@ -37,7 +37,7 @@ public class KeypadActivate : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Keypad.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.lockState = CursorLockMode.Locked;
         }
 
         if (Input.GetKeyDown(KeyCode.F))

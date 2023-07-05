@@ -6,6 +6,7 @@ public class ShootingPewPew : MonoBehaviour
     public float range = 100f;
 
     public Camera fpsCam;
+    public AudioSource gunShot;
 
     // Update is called once per frame
     void Update()
@@ -13,6 +14,7 @@ public class ShootingPewPew : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Shoot();
+            
         }
     }
                 //Luuk may not be impressed but I got the drippy code sheeeeesh
@@ -29,5 +31,6 @@ public class ShootingPewPew : MonoBehaviour
                 target.Damage(damage);
             }
         }
+        gunShot.Play(); // Play the gunshot sound
     }
 }

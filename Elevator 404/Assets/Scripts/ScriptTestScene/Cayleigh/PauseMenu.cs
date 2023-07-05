@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject OptionsIU;
     public GameObject AudioUI;
     public GameObject GraphicUI;
+    public GameObject PlayerWithCrosshair;
 
 
     // Update is called once per frame
@@ -37,10 +38,12 @@ public class PauseMenu : MonoBehaviour
         OptionsIU.SetActive(false);
         AudioUI.SetActive(false);
         GraphicUI.SetActive(false);
+        PlayerWithCrosshair.SetActive(true);
     }
 
     void Pause()
     {
+        PlayerWithCrosshair.SetActive(false);
         pauseMenuIU.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;

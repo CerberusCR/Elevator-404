@@ -21,12 +21,12 @@ public class ElectricObjects : MonoBehaviour
 
     public int component;
     public bool conducting;
-    public bool lampOn;
     public bool relaisOn;
     public List<GameObject> switches= new List<GameObject>();
     public ElectricController electricController;
     public Vector3 rotateSwitchAngle;
     public Material lampOnMat;
+    public bool swichIsOn;
 
     public void Interact()
     {
@@ -67,7 +67,8 @@ public class ElectricObjects : MonoBehaviour
         //this.GetComponent<MeshRenderer>().material.SetColor("_BaseColor", Color.blue);
         if (component == 0) //lamp
         {
-            lampOn = true;
+            
+            electricController.lampOn = true;
             
             this.transform.GetChild(0).GetComponent<Light>().enabled = true;
             GetComponent<Renderer>().material = lampOnMat;
@@ -90,7 +91,7 @@ public class ElectricObjects : MonoBehaviour
         for (int i = 0; i < switches.Count; i++)
         {
             switches[i].GetComponent<ElectricObjects>().RelaisSwitch();
-            
+            switches[i].GetComponent<ElectricObjects>().swichIsOn = true;
         }
     }
 
@@ -99,20 +100,26 @@ public class ElectricObjects : MonoBehaviour
         relaisOn = false;
         for (int i = 0; i < switches.Count; i++)
         {
-            switches[i].GetComponent<ElectricObjects>().RelaisSwitch();
-            
+            if (switches[i].GetComponent<ElectricObjects>().swichIsOn)
+            {
+                switches[i].GetComponent<ElectricObjects>().RelaisSwitch();
+                switches[i].GetComponent<ElectricObjects>().swichIsOn = false;
+            }
         }
     }
 
     public void RelaisSwitch()
     {
+        
         conducting = !conducting;
-        if (conducting)
+        if (swichIsOn)
         {
+            
             this.transform.Rotate(rotateSwitchAngle);
         }
         else
         {
+            
             this.transform.Rotate(new Vector3(0, 0, 0) - rotateSwitchAngle);
         }
     }

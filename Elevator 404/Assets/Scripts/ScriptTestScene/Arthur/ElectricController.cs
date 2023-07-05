@@ -11,6 +11,8 @@ public class ElectricController : MonoBehaviour
     public List<GameObject> RelaisToReset;
     public int lowestResistancevalue;
     public int relais;
+    public bool lampOn;
+    
 
     //public GameObject[][] paths = new GameObject[4][];
 
@@ -28,6 +30,7 @@ public class ElectricController : MonoBehaviour
     {
         while (relais > 0)
         {
+            lampOn = false;
             correctPaths = 0;
             lowestResistancevalue = int.MaxValue;
             for (int i = 0; i < paths.Count; i++)
@@ -68,7 +71,15 @@ public class ElectricController : MonoBehaviour
             }
             relais--;
         }
-        StartCoroutine(RelaisReset());
+        if (lampOn == false)
+        {
+            StartCoroutine(RelaisReset());
+            
+        }
+        else
+        {
+            //de puzzel is opgelost
+        }
     }
 
     public IEnumerator RelaisReset()

@@ -1,4 +1,7 @@
+using Unity.VisualScripting;
+using UnityEditor.Build;
 using UnityEngine;
+
 
 public class ShootingPewPew : MonoBehaviour
 {
@@ -8,7 +11,8 @@ public class ShootingPewPew : MonoBehaviour
     public Camera fpsCam;
     public AudioSource gunShot;
 
-    public GameObject pauzeMenu;
+    private bool isPaused = false;
+
 
     // Update is called once per frame
     void Update()
@@ -16,24 +20,33 @@ public class ShootingPewPew : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Shoot();
-            
+
         }
     }
-                //Luuk may not be impressed but I got the drippy code sheeeeesh
+    //Luuk may not be impressed but I got the drippy code sheeeeesh
     void Shoot()
     {
-        if (pauzeMenu.activeSelf == true) { return; }
-        RaycastHit hit;
-        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit))
+        if (isPaused == false)
         {
-            Debug.Log(hit.transform.name);
 
-            Target target = hit.transform.GetComponent<Target>();
-            if (target != null)
+            RaycastHit hit;
+            if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit))
             {
-                target.Damage(damage);
+                Debug.Log(hit.transform.name);
+
+                Target target = hit.transform.GetComponent<Target>();
+                if (target != null)
+                {
+                    target.Damage(damage);
+                }
             }
+            gunShot.Play(); // Play the gunshot sound
         }
-        gunShot.Play(); // Play the gunshot sound
     }
+
+    public void setPaused(bool paused)
+    {
+        isPaused = paused;
+    }
+
 }

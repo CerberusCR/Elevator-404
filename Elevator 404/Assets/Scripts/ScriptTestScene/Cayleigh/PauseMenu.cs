@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,6 +15,14 @@ public class PauseMenu : MonoBehaviour
     public GameObject PlayerWithCrosshair;
     public GameObject Crosshair;
 
+    public ShootingPewPew shootingScript;
+
+    void Start()
+    {
+        shootingScript = FindObjectOfType<ShootingPewPew>();
+
+        //  shootingScript = GetComponent<ShootingPewPew>();
+    }
 
 
     // Update is called once per frame
@@ -33,6 +42,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        
         pauseMenuIU.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -42,16 +52,19 @@ public class PauseMenu : MonoBehaviour
         GraphicUI.SetActive(false);
         PlayerWithCrosshair.SetActive(true);
         Crosshair.SetActive(true);
+        shootingScript.setPaused(false);
     }
 
     void Pause()
     {
+       
         Crosshair.SetActive(false);
         PlayerWithCrosshair.SetActive(false);
         pauseMenuIU.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
         Cursor.lockState = CursorLockMode.None;
+        shootingScript.setPaused(true);  
         
     }
 

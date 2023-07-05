@@ -2419,6 +2419,7 @@ MonoBehaviour:
   GraphicUI: {fileID: 826424161}
   PlayerWithCrosshair: {fileID: 784776770}
   Crosshair: {fileID: 1661706686}
+  shootingScript: {fileID: 0}
 --- !u!114 &134027492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22779,6 +22780,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7928590184474603168, guid: 436f4a16ac75e2347bd491f6ae3b61e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7954204569536455485, guid: 436f4a16ac75e2347bd491f6ae3b61e9,
         type: 3}
       propertyPath: m_IsActive
@@ -22789,6 +22795,11 @@ PrefabInstance:
       propertyPath: gunShot
       value: 
       objectReference: {fileID: 1006079135}
+    - target: {fileID: 8599773782358095941, guid: 436f4a16ac75e2347bd491f6ae3b61e9,
+        type: 3}
+      propertyPath: pauzeMenu
+      value: 
+      objectReference: {fileID: 247151688}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 436f4a16ac75e2347bd491f6ae3b61e9, type: 3}
 --- !u!1 &1021342420 stripped

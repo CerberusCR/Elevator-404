@@ -2418,6 +2418,7 @@ MonoBehaviour:
   AudioUI: {fileID: 1569124574}
   GraphicUI: {fileID: 826424161}
   PlayerWithCrosshair: {fileID: 784776770}
+  Crosshair: {fileID: 1661706686}
 --- !u!114 &134027492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22776,7 +22777,7 @@ PrefabInstance:
     - target: {fileID: 7954204569536455485, guid: 436f4a16ac75e2347bd491f6ae3b61e9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8599773782358095941, guid: 436f4a16ac75e2347bd491f6ae3b61e9,
         type: 3}
@@ -33889,6 +33890,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651370907}
   m_CullTransparentMesh: 1
+--- !u!1 &1661706686 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7954204569536455485, guid: 436f4a16ac75e2347bd491f6ae3b61e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1018958835}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1661968973
 GameObject:
   m_ObjectHideFlags: 0

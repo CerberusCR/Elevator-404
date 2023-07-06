@@ -1208,7 +1208,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -4872,12 +4872,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 6bec9bf7caf157e4f8c6b2b933b108fa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.032
+      value: -0.044
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6bec9bf7caf157e4f8c6b2b933b108fa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.05
+      value: -0.046
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6bec9bf7caf157e4f8c6b2b933b108fa,
         type: 3}
@@ -8570,7 +8570,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -35906,7 +35906,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -37251,7 +37251,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -38340,21 +38340,20 @@ MonoBehaviour:
 
     WASD = Walking
 
-    Space bar = Jumping
-
     E = Interacting
 
-    Escape
-    = Pause menu
+    Escape = Pause
+    menu
 
     F = Exit interaction
 
+
     Hint:
 
-    "Within cubicles dimly
-    lit, seek the sparks that haven''t quit. Count the whispers of digital light,
-    where secrets hide in pixel''s might. A to B to C to D shall guide, to the code
-    that waits inside."'
+    "Within cubicles dimly lit, seek
+    the sparks that haven''t quit. Count the whispers of digital light, where secrets
+    hide in pixel''s might. A to B to C to D shall guide, to the code that waits
+    inside."'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2984c03b74e8ce74ab1471c2049b2c64, type: 2}
   m_sharedMaterial: {fileID: 991332159952347903, guid: 2984c03b74e8ce74ab1471c2049b2c64,

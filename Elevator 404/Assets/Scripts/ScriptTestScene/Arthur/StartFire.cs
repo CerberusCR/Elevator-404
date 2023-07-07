@@ -5,6 +5,8 @@ using UnityEngine;
 public class StartFire : MonoBehaviour
 {
     public int puzzlesComplete;
+    public GameObject alarmen;
+    public Texture txtr;
     
     public void TestFire()
     {

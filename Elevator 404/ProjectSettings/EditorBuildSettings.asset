@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Filmpje begin/Filmpje begin.unity
     guid: e20fc1294f83eb14ea29dba16be9ed37
+  - enabled: 1
+    path: Assets/Scenes/Comic einde/ComicEinde.unity
+    guid: 639d214950dddee4abb1b9eab33638ea
   m_configObjects: {}

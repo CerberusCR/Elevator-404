@@ -11,7 +11,8 @@ public class StartFire : MonoBehaviour
     public Material txtr;
     public GameObject detect;
     public GameObject geluid;
-    
+    public GameObject text;
+
     public void TestFire()
     {
         puzzlesComplete += 1;
@@ -32,6 +33,7 @@ public class StartFire : MonoBehaviour
             }
             detect.SetActive(true);
             geluid.GetComponent<AudioSource>().mute= false;
+            text.SetActive(true);
         }
     }
 }

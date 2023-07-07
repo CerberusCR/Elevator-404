@@ -11282,8 +11282,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 577500939}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.542, y: 0.9964, z: 6.435}
-  m_LocalScale: {x: 1, y: 2.0467, z: 1}
+  m_LocalPosition: {x: 8.3974, y: 0.9964, z: 6.1718}
+  m_LocalScale: {x: 2.6812243, y: 2.0467, z: 1.5265365}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -19769,8 +19769,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 926233931}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.116, y: 0.581, z: -0.215}
-  m_LocalScale: {x: 0.50775456, y: 1.671316, z: 1.4703258}
+  m_LocalPosition: {x: -0.272, y: -0.294, z: -0.167}
+  m_LocalScale: {x: 0.50775456, y: 1.7664139, z: 1.4703258}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1595282843}
@@ -41636,6 +41636,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: office keypad
+      objectReference: {fileID: 0}
+    - target: {fileID: 5951055695217825976, guid: 48e17ce396f684a4dab4b6f55d4c2664,
+        type: 3}
+      propertyPath: m_TagString
+      value: keycode
       objectReference: {fileID: 0}
     - target: {fileID: 6475531071666930178, guid: 48e17ce396f684a4dab4b6f55d4c2664,
         type: 3}

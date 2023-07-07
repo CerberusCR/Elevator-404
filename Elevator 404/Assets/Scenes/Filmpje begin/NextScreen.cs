@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class NextScreen : MonoBehaviour
@@ -12,12 +13,15 @@ public class NextScreen : MonoBehaviour
     public GameObject knop3;
     public GameObject plaatje4;
     public GameObject knop4;
+    public AudioSource pageTurn;
 
 
     public void GoToNextScreen1To2()
     {
         plaatje1.SetActive(false);
         knop1.SetActive(false);
+        
+        pageTurn.Play();
 
         plaatje2.SetActive(true);
         knop2.SetActive(true);
@@ -27,6 +31,8 @@ public class NextScreen : MonoBehaviour
     {
         plaatje2.SetActive(false);
         knop2.SetActive(false);
+        
+        pageTurn.Play();
 
         plaatje3.SetActive(true);
         knop3.SetActive(true);
@@ -36,6 +42,8 @@ public class NextScreen : MonoBehaviour
     {
         plaatje3.SetActive(false);
         knop3.SetActive(false);
+        
+        pageTurn.Play();
 
         plaatje4.SetActive(true);
         knop4.SetActive(true);

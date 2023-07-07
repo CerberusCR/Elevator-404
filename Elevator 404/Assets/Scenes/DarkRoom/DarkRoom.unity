@@ -1151,7 +1151,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 60
+  m_RootOrder: 59
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &48294417 stripped
 GameObject:
@@ -2818,7 +2818,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 66
+  m_RootOrder: 65
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &131528324 stripped
 GameObject:
@@ -4970,7 +4970,7 @@ MonoBehaviour:
   conducting: 0
   relaisOn: 0
   switches: []
-  electricController: {fileID: 405381032}
+  electricController: {fileID: 1800679338}
   rotateSwitchAngle: {x: 0, y: 30, z: 0}
   lampOnMat: {fileID: 0}
   swichIsOn: 0
@@ -6780,7 +6780,7 @@ Transform:
   - {fileID: 1966133499}
   - {fileID: 1829357312}
   m_Father: {fileID: 0}
-  m_RootOrder: 68
+  m_RootOrder: 67
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &287516846 stripped
 GameObject:
@@ -7271,17 +7271,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 526842413c8274941b5ac011e8295196,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.751
+      value: 8.67
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 526842413c8274941b5ac011e8295196,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.264
+      value: 0.307
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 526842413c8274941b5ac011e8295196,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.26
+      value: 8.215
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 526842413c8274941b5ac011e8295196,
         type: 3}
@@ -7608,7 +7608,7 @@ MonoBehaviour:
   conducting: 1
   relaisOn: 0
   switches: []
-  electricController: {fileID: 405381032}
+  electricController: {fileID: 1800679338}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
   lampOnMat: {fileID: 0}
   swichIsOn: 0
@@ -7729,7 +7729,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 5
-  m_Range: 10
+  m_Range: 15
   m_SpotAngle: 81.161125
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -7819,7 +7819,7 @@ MonoBehaviour:
   conducting: 1
   relaisOn: 0
   switches: []
-  electricController: {fileID: 405381032}
+  electricController: {fileID: 1800679338}
   rotateSwitchAngle: {x: 0, y: 30, z: 0}
   lampOnMat: {fileID: 0}
   swichIsOn: 0
@@ -9111,83 +9111,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.4999995, y: 0, z: 2.5000005}
   m_Center: {x: 0, y: 0, z: 1.2571584}
---- !u!1 &405381029
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 405381031}
-  - component: {fileID: 405381032}
-  m_Layer: 0
-  m_Name: electric controller 4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &405381031
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 405381029}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.05, y: 1.12, z: -2.13}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 37
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &405381032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 405381029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ffa369fdfd2dfe4ea1f65352230c2cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  correctPaths: 0
-  lowestResistancePaths: 
-  RelaisToReset: []
-  lowestResistancevalue: 0
-  relais: 0
-  lampOn: 0
-  fire: {fileID: 0}
-  paths:
-  - components:
-    - {fileID: 336594324}
-    - {fileID: 2018163310}
-    - {fileID: 595501813}
-    - {fileID: 214428854}
-    resistances: 4
-    pathIsActive: 0
-  - components:
-    - {fileID: 561231507}
-    - {fileID: 336594324}
-    resistances: 4
-    pathIsActive: 0
-  - components:
-    - {fileID: 561231507}
-    - {fileID: 1282239019}
-    - {fileID: 1468998768}
-    resistances: 3
-    pathIsActive: 0
-  - components:
-    - {fileID: 214428854}
-    - {fileID: 1282239019}
-    - {fileID: 2018163310}
-    - {fileID: 1468998768}
-    resistances: 4
-    pathIsActive: 0
 --- !u!1001 &408842109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10809,7 +10732,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 72c36561b58bd6c408c667802da96158,
         type: 3}
       propertyPath: m_RootOrder
-      value: 53
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 72c36561b58bd6c408c667802da96158,
         type: 3}
@@ -11179,7 +11102,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1d25c073c6fb56443851ffb8a0fc754c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 46
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d25c073c6fb56443851ffb8a0fc754c,
         type: 3}
@@ -11878,7 +11801,7 @@ MonoBehaviour:
   conducting: 1
   relaisOn: 0
   switches: []
-  electricController: {fileID: 405381032}
+  electricController: {fileID: 1800679338}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
   lampOnMat: {fileID: 0}
   swichIsOn: 0
@@ -12015,7 +11938,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &554073564
 GameObject:
@@ -12223,7 +12146,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 61
+  m_RootOrder: 60
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &554384790
 PrefabInstance:
@@ -12527,7 +12450,7 @@ MonoBehaviour:
   conducting: 1
   relaisOn: 0
   switches: []
-  electricController: {fileID: 405381032}
+  electricController: {fileID: 1800679338}
   rotateSwitchAngle: {x: 0, y: -30, z: 0}
   lampOnMat: {fileID: 0}
   swichIsOn: 0
@@ -12926,7 +12849,7 @@ MonoBehaviour:
   conducting: 1
   relaisOn: 0
   switches: []
-  electricController: {fileID: 405381032}
+  electricController: {fileID: 1800679338}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
   lampOnMat: {fileID: 2100000, guid: fa251c08e8b0ebe4ca0352968ae1bea6, type: 2}
   swichIsOn: 0
@@ -13608,7 +13531,7 @@ MonoBehaviour:
   conducting: 1
   relaisOn: 0
   switches: []
-  electricController: {fileID: 405381032}
+  electricController: {fileID: 1800679338}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
   lampOnMat: {fileID: 0}
   swichIsOn: 0
@@ -14242,7 +14165,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 59
+  m_RootOrder: 58
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &676754894
 PrefabInstance:
@@ -15080,7 +15003,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f07cd81daba1d7444b003ea5cad11451,
         type: 3}
       propertyPath: m_RootOrder
-      value: 49
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f07cd81daba1d7444b003ea5cad11451,
         type: 3}
@@ -17760,7 +17683,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: cb68669ba7ba8f24781f83c62fee06ac,
         type: 3}
       propertyPath: m_RootOrder
-      value: 52
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cb68669ba7ba8f24781f83c62fee06ac,
         type: 3}
@@ -19123,6 +19046,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1078178236}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1029447079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1029447081}
+  - component: {fileID: 1029447080}
+  m_Layer: 0
+  m_Name: puzzelController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1029447080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029447079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced5771773f759149974fa8fd8f92458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzlesComplete: 0
+--- !u!4 &1029447081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029447079}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.074646, y: 1.3665466, z: -6.3019514}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 68
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1035873253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19264,7 +19232,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f07cd81daba1d7444b003ea5cad11451,
         type: 3}
       propertyPath: m_RootOrder
-      value: 50
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f07cd81daba1d7444b003ea5cad11451,
         type: 3}
@@ -20874,7 +20842,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 42
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 168.203, y: 98.272, z: -275.186}
 --- !u!1001 &1117738799
 PrefabInstance:
@@ -22027,7 +21995,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b6ad93ee78164c04983ba3d09eb01880,
         type: 3}
       propertyPath: m_RootOrder
-      value: 38
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b6ad93ee78164c04983ba3d09eb01880,
         type: 3}
@@ -22106,7 +22074,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1d25c073c6fb56443851ffb8a0fc754c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 47
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d25c073c6fb56443851ffb8a0fc754c,
         type: 3}
@@ -22829,7 +22797,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 62
+  m_RootOrder: 61
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1258281126 stripped
 GameObject:
@@ -23087,7 +23055,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: cb68669ba7ba8f24781f83c62fee06ac,
         type: 3}
       propertyPath: m_RootOrder
-      value: 57
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cb68669ba7ba8f24781f83c62fee06ac,
         type: 3}
@@ -23218,7 +23186,7 @@ MonoBehaviour:
   conducting: 0
   relaisOn: 0
   switches: []
-  electricController: {fileID: 405381032}
+  electricController: {fileID: 1800679338}
   rotateSwitchAngle: {x: 0, y: 30, z: 0}
   lampOnMat: {fileID: 0}
   swichIsOn: 0
@@ -24007,7 +23975,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: cb68669ba7ba8f24781f83c62fee06ac,
         type: 3}
       propertyPath: m_RootOrder
-      value: 51
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cb68669ba7ba8f24781f83c62fee06ac,
         type: 3}
@@ -25053,7 +25021,7 @@ MonoBehaviour:
   conducting: 1
   relaisOn: 0
   switches: []
-  electricController: {fileID: 405381032}
+  electricController: {fileID: 1800679338}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
   lampOnMat: {fileID: 0}
   swichIsOn: 0
@@ -25501,7 +25469,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 72c36561b58bd6c408c667802da96158,
         type: 3}
       propertyPath: m_RootOrder
-      value: 56
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 72c36561b58bd6c408c667802da96158,
         type: 3}
@@ -26660,7 +26628,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 64
+  m_RootOrder: 63
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1001 &1451996224
 PrefabInstance:
@@ -26765,7 +26733,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f07cd81daba1d7444b003ea5cad11451,
         type: 3}
       propertyPath: m_RootOrder
-      value: 48
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f07cd81daba1d7444b003ea5cad11451,
         type: 3}
@@ -27133,7 +27101,7 @@ MonoBehaviour:
   relaisOn: 0
   switches:
   - {fileID: 336594324}
-  electricController: {fileID: 405381032}
+  electricController: {fileID: 1800679338}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
   lampOnMat: {fileID: 0}
   swichIsOn: 0
@@ -27635,7 +27603,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 63
+  m_RootOrder: 62
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1001 &1494230206
 PrefabInstance:
@@ -28479,7 +28447,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 67
+  m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1525289820 stripped
 GameObject:
@@ -28625,7 +28593,7 @@ MonoBehaviour:
   conducting: 1
   relaisOn: 0
   switches: []
-  electricController: {fileID: 405381032}
+  electricController: {fileID: 1800679338}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
   lampOnMat: {fileID: 0}
   swichIsOn: 0
@@ -31070,7 +31038,7 @@ MonoBehaviour:
   conducting: 0
   relaisOn: 0
   switches: []
-  electricController: {fileID: 405381032}
+  electricController: {fileID: 1800679338}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
   lampOnMat: {fileID: 0}
   swichIsOn: 0
@@ -32538,7 +32506,7 @@ MonoBehaviour:
   lowestResistancevalue: 0
   relais: 0
   lampOn: 0
-  fire: {fileID: 0}
+  fire: {fileID: 1029447079}
   paths:
   - components:
     - {fileID: 415689971}
@@ -32558,7 +32526,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 40
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1757688393
 GameObject:
@@ -33659,7 +33627,7 @@ MonoBehaviour:
   lowestResistancevalue: 0
   relais: 0
   lampOn: 0
-  fire: {fileID: 0}
+  fire: {fileID: 1029447079}
   paths:
   - components:
     - {fileID: 336594324}
@@ -33699,7 +33667,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1802737753
 PrefabInstance:
@@ -35912,7 +35880,7 @@ MonoBehaviour:
   lowestResistancevalue: 0
   relais: 0
   lampOn: 0
-  fire: {fileID: 0}
+  fire: {fileID: 1029447079}
   paths:
   - components:
     - {fileID: 571120350}
@@ -35937,7 +35905,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 39
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1906601420
 PrefabInstance:
@@ -36304,7 +36272,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a49065859ebdeb24e934d91d7c93d439,
         type: 3}
       propertyPath: m_RootOrder
-      value: 55
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a49065859ebdeb24e934d91d7c93d439,
         type: 3}
@@ -36710,7 +36678,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 65
+  m_RootOrder: 64
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1001 &1922297472
 PrefabInstance:
@@ -37922,7 +37890,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f07cd81daba1d7444b003ea5cad11451,
         type: 3}
       propertyPath: m_RootOrder
-      value: 58
+      value: 57
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f07cd81daba1d7444b003ea5cad11451,
         type: 3}
@@ -38299,7 +38267,7 @@ MonoBehaviour:
   relaisOn: 0
   switches:
   - {fileID: 561231507}
-  electricController: {fileID: 405381032}
+  electricController: {fileID: 1800679338}
   rotateSwitchAngle: {x: 0, y: 0, z: 0}
   lampOnMat: {fileID: 0}
   swichIsOn: 0
@@ -39296,7 +39264,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 60b6f904d5bc3694dac84630772a9340,
         type: 3}
       propertyPath: m_RootOrder
-      value: 54
+      value: 53
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 60b6f904d5bc3694dac84630772a9340,
         type: 3}
@@ -39780,7 +39748,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f97c6a8f3ca859b4f977ba96a41d990c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 44
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f97c6a8f3ca859b4f977ba96a41d990c,
         type: 3}
@@ -40072,7 +40040,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c6936a4d0a2406d48a3ae9a092a40e54,
         type: 3}
       propertyPath: m_RootOrder
-      value: 45
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6936a4d0a2406d48a3ae9a092a40e54,
         type: 3}

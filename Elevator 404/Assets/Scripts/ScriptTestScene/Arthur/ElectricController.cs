@@ -12,6 +12,8 @@ public class ElectricController : MonoBehaviour
     public int lowestResistancevalue;
     public int relais;
     public bool lampOn;
+    public GameObject fire;
+    
     
 
     //public GameObject[][] paths = new GameObject[4][];
@@ -74,11 +76,10 @@ public class ElectricController : MonoBehaviour
         if (lampOn == false)
         {
             StartCoroutine(RelaisReset());
-            
         }
         else
         {
-            //de puzzel is opgelost
+            fire.GetComponent<StartFire>().TestFire();
         }
     }
 
